@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Albums de Damso</title>
+    <link rel="stylesheet" href="/stylecss/stylecss.css">
+</head>
+<body>
+    <h1>Discographie de Damso</h1>
+
+    <div class="album-list">
+        {{range .}}
+        <div class="card">
+            <img src="{{ (index .Images 0).Url }}" width="200">
+            <h2>{{.Name}}</h2>
+            <p>Sortie le : {{.ReleaseDate}}</p>
+            <p>{{.TotalTracks}} musiques</p>
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>

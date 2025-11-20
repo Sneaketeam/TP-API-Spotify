@@ -7,8 +7,13 @@ import (
 )
 
 func InitServer() {
-	fileServer := http.FileServer(http.Dir("./assets"))
-	http.Handle("/assets/", http.StripPrefix("/assets/", fileServer))
+
+	fileServer := http.FileServer(http.Dir("./stylecss"))
+	http.Handle("/stylecss/", http.StripPrefix("/stylecss/", fileServer))
+
+	imgServer := http.FileServer(http.Dir("./image"))
+	http.Handle("/image/", http.StripPrefix("/image/", imgServer))
+
 
 	http.HandleFunc("/", controller.IndexPage)
 	http.HandleFunc("/album/damso", controller.AlbumDamsoHandler)

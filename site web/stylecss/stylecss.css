@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/image/studio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+}
+
+h1 {
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 40px;
+}
+
+h4 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.album-list {
+    width: 90%;
+    margin: auto;
+}
+
+.card, .track-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    width: 250px;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px;
+    vertical-align: top;
+    border-radius: 8px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #333;
+}
+
+a {
+    display: inline-block;
+    background-color: #1DB954;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #1ed760;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.artist-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255,255,255,0.2);
+}

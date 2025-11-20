@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Laylow - Maladresse</title>
+    <link rel="stylesheet" href="/stylecss/stylecss.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Le Titre</h1>
+        
+        <div class="track-card">
+            <img src="{{ (index .Album.Images 0).Url }}" width="300" alt="Cover Album">
+            
+            <h2>{{ .Name }}</h2>
+            <h3>Artiste : {{ (index .Artists 0).Name }}</h3>
+            <p>Album : {{ .Album.Name }}</p>
+            <p>Sortie le : {{ .Album.ReleaseDate }}</p>
+            
+            <br>
+            <a href="{{ .ExternalUrls.Spotify }}" class="btn-spotify" target="_blank">
+                Écouter sur Spotify
+            </a>
+        </div>
+    </div>
+</body>
+</html>
