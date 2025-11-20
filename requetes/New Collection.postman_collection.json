@@ -1,14 +1,12 @@
 {
 	"info": {
 		"_postman_id": "716f0c8c-ff87-4b71-a04f-2337890a8055",
-		"name": "New Collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "50123200",
-		"_collection_link": "https://www.postman.com/gglegrand220706-2776836/workspace/exercice-api/collection/50123200-716f0c8c-ff87-4b71-a04f-2337890a8055?action=share&source=collection_link&creator=50123200"
+		"name": "TP API Spotify - Rendu Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "https://accounts.spotify.com/api/token?client_id=bfd18fe9f8fe4350973a982051bf8366&client_secret=799165282057445582d03bd5",
+			"name": "Auth",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -20,10 +18,26 @@
 				],
 				"body": {
 					"mode": "urlencoded",
-					"urlencoded": []
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "bfd18fe9f8fe4350973a982051bf8366",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "799165282057445582d03bd575714af4",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
 				},
 				"url": {
-					"raw": "https://accounts.spotify.com/api/token?client_id=bfd18fe9f8fe4350973a982051bf8366&client_secret=799165282057445582d03bd575714af4&grant_type=client_credentials",
+					"raw": "https://accounts.spotify.com/api/token",
 					"protocol": "https",
 					"host": [
 						"accounts",
@@ -33,73 +47,53 @@
 					"path": [
 						"api",
 						"token"
-					],
-					"query": [
-						{
-							"key": "client_id",
-							"value": "bfd18fe9f8fe4350973a982051bf8366"
-						},
-						{
-							"key": "client_secret",
-							"value": "799165282057445582d03bd575714af4"
-						},
-						{
-							"key": "grant_type",
-							"value": "client_credentials"
-						}
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "dmaso",
+			"name": "Q1 - Recherche Damso",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://open.spotify.com/artist/2UwqpfQtNuhBwviIC0f2ie",
+					"raw": "https://api.spotify.com/v1/search?q=Damso&type=artist&limit=3",
 					"protocol": "https",
 					"host": [
-						"open",
+						"api",
 						"spotify",
 						"com"
 					],
 					"path": [
-						"artist",
-						"2UwqpfQtNuhBwviIC0f2ie"
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Damso"
+						},
+						{
+							"key": "type",
+							"value": "artist"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "getablum damso",
+			"name": "Q2 - Albums Damso",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.spotify.com/v1/artists/2UwqpfQtNuhBwviIC0f2ie/albums",
+					"raw": "https://api.spotify.com/v1/artists/2RS1iy08e1nNHQA3aqyxgv/albums",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -109,7 +103,7 @@
 					"path": [
 						"v1",
 						"artists",
-						"2UwqpfQtNuhBwviIC0f2ie",
+						"2RS1iy08e1nNHQA3aqyxgv",
 						"albums"
 					]
 				}
@@ -117,22 +111,12 @@
 			"response": []
 		},
 		{
-			"name": "get batterie faible 5limit",
+			"name": "Q3 - Tracks Batterie Faible",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.spotify.com/v1/albums/4beTtJKeg3ITJsiVuxkiV0/tracks?offset=0&limit=5&locale=en,fr;q%3D0.9,fr-FR;q%3D0.8",
+					"raw": "https://api.spotify.com/v1/albums/367L91BqZ7XF6j9U4L6qJ7/tracks?limit=5",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -142,21 +126,13 @@
 					"path": [
 						"v1",
 						"albums",
-						"4beTtJKeg3ITJsiVuxkiV0",
+						"367L91BqZ7XF6j9U4L6qJ7",
 						"tracks"
 					],
 					"query": [
 						{
-							"key": "offset",
-							"value": "0"
-						},
-						{
 							"key": "limit",
 							"value": "5"
-						},
-						{
-							"key": "locale",
-							"value": "en,fr;q%3D0.9,fr-FR;q%3D0.8"
 						}
 					]
 				}
@@ -164,18 +140,8 @@
 			"response": []
 		},
 		{
-			"name": "musique impardonable damso",
+			"name": "Q4 - Track Impardonnable",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -196,22 +162,12 @@
 			"response": []
 		},
 		{
-			"name": "Laylow musique populaire",
+			"name": "Q5 - Top Tracks Laylow",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.spotify.com/v1/artists/0LnhY2fzptb0QEs5Q5gM7S/top-tracks?market=FR",
+					"raw": "https://api.spotify.com/v1/artists/1wVfrkMhyRLpd4IXlT8T6V/top-tracks?market=FR",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -221,7 +177,7 @@
 					"path": [
 						"v1",
 						"artists",
-						"0LnhY2fzptb0QEs5Q5gM7S",
+						"1wVfrkMhyRLpd4IXlT8T6V",
 						"top-tracks"
 					],
 					"query": [
@@ -235,22 +191,12 @@
 			"response": []
 		},
 		{
-			"name": "Laylow Maladresse",
+			"name": "Q6 - Search Maladresse",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.spotify.com/v1/search?q=track:Maladresse%20artist:Laylow&type=track&limit=1",
+					"raw": "https://api.spotify.com/v1/search?q=track:Maladresse artist:Laylow&type=track&limit=1",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -264,7 +210,7 @@
 					"query": [
 						{
 							"key": "q",
-							"value": "track:Maladresse%20artist:Laylow"
+							"value": "track:Maladresse artist:Laylow"
 						},
 						{
 							"key": "type",
@@ -280,22 +226,12 @@
 			"response": []
 		},
 		{
-			"name": "Actu hugo du jour",
+			"name": "Q7 - Search Podcast",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.spotify.com/v1/search?q=Les%20actus%20du%20jour%20-%20Hugo%20décrypte&type=show&market=FR",
+					"raw": "https://api.spotify.com/v1/search?q=Les actus du jour - Hugo décrypte&type=show&market=FR",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -309,7 +245,7 @@
 					"query": [
 						{
 							"key": "q",
-							"value": "Les%20actus%20du%20jour%20-%20Hugo%20décrypte"
+							"value": "Les actus du jour - Hugo décrypte"
 						},
 						{
 							"key": "type",
@@ -325,20 +261,111 @@
 			"response": []
 		},
 		{
-			"name": "trois dernier episdode hugo",
+			"name": "Q8 - Episodes Podcast",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/shows/2ZMeS4p5VfD0h9F8kM6zJ7/episodes?limit=3&market=FR",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shows",
+						"2ZMeS4p5VfD0h9F8kM6zJ7",
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "market",
+							"value": "FR"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "deuxième épisode de la liste obtenu à la question 8.",
+			"name": "Q9 - Episode Offset",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/shows/2ZMeS4p5VfD0h9F8kM6zJ7/episodes?limit=1&offset=1&market=FR",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shows",
+						"2ZMeS4p5VfD0h9F8kM6zJ7",
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						},
+						{
+							"key": "market",
+							"value": "FR"
+						}
+					]
+				}
 			},
 			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
