@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "716f0c8c-ff87-4b71-a04f-2337890a8055",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50123200",
+		"_collection_link": "https://www.postman.com/gglegrand220706-2776836/workspace/exercice-api/collection/50123200-716f0c8c-ff87-4b71-a04f-2337890a8055?action=share&source=collection_link&creator=50123200"
+	},
+	"item": [
+		{
+			"name": "https://accounts.spotify.com/api/token?client_id=bfd18fe9f8fe4350973a982051bf8366&client_secret=799165282057445582d03bd5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://accounts.spotify.com/api/token?client_id=bfd18fe9f8fe4350973a982051bf8366&client_secret=799165282057445582d03bd575714af4&grant_type=client_credentials",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"api",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "bfd18fe9f8fe4350973a982051bf8366"
+						},
+						{
+							"key": "client_secret",
+							"value": "799165282057445582d03bd575714af4"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dmaso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://open.spotify.com/artist/2UwqpfQtNuhBwviIC0f2ie",
+					"protocol": "https",
+					"host": [
+						"open",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"artist",
+						"2UwqpfQtNuhBwviIC0f2ie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getablum damso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/artists/2UwqpfQtNuhBwviIC0f2ie/albums",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"2UwqpfQtNuhBwviIC0f2ie",
+						"albums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get batterie faible 5limit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/albums/4beTtJKeg3ITJsiVuxkiV0/tracks?offset=0&limit=5&locale=en,fr;q%3D0.9,fr-FR;q%3D0.8",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"albums",
+						"4beTtJKeg3ITJsiVuxkiV0",
+						"tracks"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "locale",
+							"value": "en,fr;q%3D0.9,fr-FR;q%3D0.8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "musique impardonable damso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/tracks/6nkFbmDY84a9rejFSbIMdj",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"tracks",
+						"6nkFbmDY84a9rejFSbIMdj"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Laylow musique populaire",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/artists/0LnhY2fzptb0QEs5Q5gM7S/top-tracks?market=FR",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"0LnhY2fzptb0QEs5Q5gM7S",
+						"top-tracks"
+					],
+					"query": [
+						{
+							"key": "market",
+							"value": "FR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Laylow Maladresse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/search?q=track:Maladresse%20artist:Laylow&type=track&limit=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "track:Maladresse%20artist:Laylow"
+						},
+						{
+							"key": "type",
+							"value": "track"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actu hugo du jour",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQCPqOxyGGRMe2nyFlEZ76lE6S8CoskatNdqdyY3rMfaHNZd7nC7b_aBItqZAXwcQeE95W5o1IIMDcFVuyNWnahIesf8sf8kdCrw8fO7dC0XfDFWWgCyGillno4AqBOvG-rKL6v1qxc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/search?q=Les%20actus%20du%20jour%20-%20Hugo%20décrypte&type=show&market=FR",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Les%20actus%20du%20jour%20-%20Hugo%20décrypte"
+						},
+						{
+							"key": "type",
+							"value": "show"
+						},
+						{
+							"key": "market",
+							"value": "FR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trois dernier episdode hugo",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "deuxième épisode de la liste obtenu à la question 8.",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
