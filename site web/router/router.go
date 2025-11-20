@@ -1,0 +1,19 @@
+package router
+
+import (
+	"TpSpotify/controller"
+	"fmt"
+	"net/http"
+)
+
+func InitServer() {
+	fileServer := http.FileServer(http.Dir("./assets"))
+	http.Handle("/assets/", http.StripPrefix("/assets/", fileServer))
+
+	http.HandleFunc("/", controller.IndexPage)
+	http.HandleFunc("/album/damso", controller.AlbumDamsoHandler)
+	http.HandleFunc("/track/laylow", controller.TrackLaylowHandler)
+
+	fmt.Println("Le serveur est lancé sur http://localhost:8080")
+	http.ListenAndServe(":8080", nil)
+}
